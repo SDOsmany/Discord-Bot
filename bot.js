@@ -14,9 +14,9 @@ client.on('ready', () => {
 
 client.on('message', message => {
 
-    if (message.content === 'ping') {
+    if (message.content === 'Hello') {
 
-       message.reply('fucker');
+       message.reply('Hi i am Eugene, an infidel');
 
        }
 
