@@ -24,7 +24,7 @@ client.on('message', message => {
 client.on('message', message => {
 
     if (message.content === 'SUS') {
-        let randomVar = Math.floor((Math.random() * 10));
+        let randomVar = Math.floor((Math.random() *(12) + 1));
         switch(randomVar) {
             case 0:
               message.reply('Yellow did it!. Kick him of the ship')
@@ -53,6 +53,8 @@ client.on('message', message => {
               case 8:
                 message.reply('White did it!. Kick him of the ship')
               break;
+              case 9:
+                message.reply('Lime did it!. Kick him of the ship')
             default:
                 message.reply('Pink did it!. Kick him of the ship')
           }
