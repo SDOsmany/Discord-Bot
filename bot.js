@@ -55,6 +55,7 @@ client.on('message', message => {
               break;
               case 9:
                 message.reply('Lime did it!. Kick him of the ship')
+                break;
             default:
                 message.reply('Pink did it!. Kick him of the ship')
           }
