@@ -16,7 +16,7 @@ client.on('message', message => {
 
     if (message.content === 'Hello') {
 
-       message.reply('Hi i am Eugene, an infidel');
+       message.reply('Hello, welcome to our discord channel. I am Eugene');
 
        }
 
