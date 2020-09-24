@@ -1,4 +1,4 @@
-const SUS = (message) => {
+const sus = (message) => {
   if (message.content === "SUS") {
     let randomVar = Math.floor(Math.random() * 12 + 1);
     switch (randomVar) {
@@ -37,4 +37,4 @@ const SUS = (message) => {
     }
   }
 };
-export default SUS;
+module.exports = sus
