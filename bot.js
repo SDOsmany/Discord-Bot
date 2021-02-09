@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const sus = require("./Components/SUS/index");
+const sus = require("./Components/sus/index");
 
 client.on("ready", () => {
   console.log("I am ready!");
