@@ -3,11 +3,19 @@ module.exports.run = async (client, message, args) => {
     return message.channel.send(
       "You must be in a voice channel to use this command."
     );
-  const music = args.join(" ");
-  client.disbute.play(message, music);
+
+  let queue = await client.distube.getQueue(message);
+
+  if (queue) {
+    client.distube.skip(message);
+
+    message.channel.send("DONE!");
+  } else if (!queue) {
+    return;
+  }
 };
 
 module.exports.config = {
-  name: "play",
-  aliases: ["p"],
+  name: "skip",
+  aliases: ["s"],
 };
