@@ -1,4 +1,9 @@
-.env
 /node_modules
 package-lock.json
 /docs
+.env
+
+
+
+#Rule1-the file needs to be created before adding it to the gitignore file
+#Rule2-the file must not be already in the respository
