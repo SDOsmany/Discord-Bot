@@ -22,6 +22,9 @@ client.distube
     .on("playSong", (message, queue, song) => message.channel.send(
         `Playing \`${song.name}\` - \`${song.formattedDuration}\`\nRequested by: ${song.user}`
 	))
+  .on("addSong", (message, queue, song) => message.channel.send(
+    `Added ${song.name} - \`${song.formattedDuration}\` to the queue by ${song.user}`
+))
 
 
 
