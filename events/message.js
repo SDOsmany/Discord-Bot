@@ -6,7 +6,7 @@ module.exports = async (client, message) => {
   const args = messageArray.slice(1);
 
   if (message.author.client || message.channel.type === "dm") return;
-  const prefix = "?";
+  const prefix = "!";
 
   if (message.content.match(new RegExp(`^<@!?${client.user.id}>( |)$`)))
     return message.channel.send(
