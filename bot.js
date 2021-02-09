@@ -15,8 +15,16 @@ client.on("message", (message) => {
     }
   });
 
-
+//MUSIC 
 client.distube = new Distube(client,{searchSongs:false,emitNewSongOnly:true});
-// THIS  MUST  BE  THIS  WAY
+
+client.distube
+    .on("playSong", (message, queue, song) => message.channel.send(
+        `Playing \`${song.name}\` - \`${song.formattedDuration}\`\nRequested by: ${song.user}`
+	))
+
+
+
+
 
 client.login(process.env.TOKEN);//BOT_TOKEN is the Client Secret
