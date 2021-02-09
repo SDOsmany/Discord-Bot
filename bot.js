@@ -8,6 +8,11 @@ client.on('ready', () => {
     console.log('I am ready!');
 
 });
+client.on("message", (message) => {
+    if (message.content === "Hello") {
+      message.reply("Hello, welcome to our discord channel. I am Eugene");
+    }
+  });
 
 // THIS  MUST  BE  THIS  WAY
 
