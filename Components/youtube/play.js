@@ -1,4 +1,4 @@
 module.exports.run=async(client,message,args)=>{
     const music = args.join(" ");
-    client.distube.play(message,music)
+    client.distubnoe.play(message,music)
 }
