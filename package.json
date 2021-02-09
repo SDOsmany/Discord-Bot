@@ -9,6 +9,7 @@
     "dotenv": "^8.2.0",
     "ffmpeg": "0.0.4",
     "ffmpeg-static": "^4.2.7",
+    "fs": "0.0.1-security",
     "node": "^15.8.0"
   },
   "devDependencies": {},

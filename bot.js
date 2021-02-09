@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const Distube = require('distube');
+const botsettings = require("./botsettings.json")
 require('dotenv').config()
  
 
