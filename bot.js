@@ -2,7 +2,9 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const sus = require("./Components/sus/index");
 const run = require("./Components/youtube/search")
+const Distube = require('distube');
 
+client.distube = new Distube(client,{searchSongs:false,emitNewSongOnly:true});
 client.on("ready", () => {
   console.log("I am ready!");
 });
