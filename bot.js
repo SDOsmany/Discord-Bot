@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-import SUS from './Components/SUS/index'
+const sus = require("./Components/SUS/index");
 
  
 
@@ -17,7 +17,7 @@ client.on('message', message => {
        message.reply('Hello, welcome to our discord channel. I am Eugene');
 
        }
-    SUS(message);
+    sus(message);
 
 
 });
