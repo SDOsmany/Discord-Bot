@@ -8,7 +8,6 @@ client.on('ready', () => {
     console.log('I am ready!');
 
 });
-console.log(process.env.TOKEN)
 
 // THIS  MUST  BE  THIS  WAY
 
