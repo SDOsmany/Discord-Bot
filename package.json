@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "bot.js",
   "dependencies": {
+    "@discordjs/node-pre-gyp": "^0.2.0",
     "discord.js": "^12.5.1",
     "distube": "^2.8.8",
     "dotenv": "^8.2.0",
@@ -10,6 +11,10 @@
     "ffmpeg-static": "^4.2.7",
     "fs": "0.0.1-security",
     "node": "^15.8.0",
+    "node-addon-api": "^3.1.0",
+    "node-gyp": "^7.1.2",
+    "node-pre-gyp": "^0.17.0",
+    "opusscript": "^0.0.7",
     "ytdl-core": "^4.4.5"
   },
   "scripts": {
