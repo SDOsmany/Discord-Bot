@@ -1,5 +1,5 @@
 
-const config = require('./settings.json');
+const config = require('../settings.json');
 
 module.exports.run = async (bot, message, args) => {
   if (!message.member.voice.channel)

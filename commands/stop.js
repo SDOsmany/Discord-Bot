@@ -1,3 +1,5 @@
+const config = require('../settings.json');
+
 module.exports.run = async (bot, message, args) => {
   if (!message.member.voice.channel)
     return message.channel.send(
