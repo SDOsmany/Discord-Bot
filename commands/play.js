@@ -1,5 +1,6 @@
 
 const config = require('../settings.json');
+const DisTube = require('distube')
 
 module.exports.run = async (bot, message, args) => {
   if (!message.member.voice.channel)
