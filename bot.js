@@ -1,34 +1,34 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();
-const Distube = require('distube');
-const botsettings = require("./botsettings.json")
 require('dotenv').config()
- 
 
-client.on('ready', () => {
+//MUSIC --------------------------------------------------------------------------------------------------
 
-    console.log('I am ready!');
-
+const bot = new Discord.Client({
+	partials: ['MESSAGE', 'CHANNEL', 'REACTION']
 });
-client.on("message", (message) => {
-    if (message.content === "Hello") {
-      message.reply("Hello, welcome to our discord channel. I am Eugene");
-    }
-  });
+const config = require('./settings.json');
+const { loadCommands } = require('./utils/loadCommands');
+const DisTube = require('distube')
 
-//MUSIC 
-client.distube = new Distube(client,{searchSongs:false,emitNewSongOnly:true});
-
-client.distube
+bot.distube = new DisTube(bot, { searchSongs: false, emitNewSongOnly: true });
+bot.distube
     .on("playSong", (message, queue, song) => message.channel.send(
         `Playing \`${song.name}\` - \`${song.formattedDuration}\`\nRequested by: ${song.user}`
 	))
-  .on("addSong", (message, queue, song) => message.channel.send(
-    `Added ${song.name} - \`${song.formattedDuration}\` to the queue by ${song.user}`
-))
+	.on("addSong", (message, queue, song) => message.channel.send(
+        `Added ${song.name} - \`${song.formattedDuration}\` to the queue by ${song.user}`
+    ))
+
+require('./utils/loadEvents')(bot);
+
+bot.commands = new Discord.Collection();
+bot.aliases = new Discord.Collection();
+
+loadCommands(bot);
+
+//MUSIC --------------------------------------------------------------------------------------------------
 
 
 
 
-
-client.login(process.env.TOKEN);//BOT_TOKEN is the Client Secret
+bot.login(process.env.TOKEN);//BOT_TOKEN is the Client Secret
