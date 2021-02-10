@@ -27,6 +27,7 @@
 // loadCommands(bot);
 
 //MUSIC --------------------------------------------------------------------------------------------------
+require('dotenv').config()
 const Discord = require('discord.js'),
     DisTube = require('distube'),
     client = new Discord.Client(),
